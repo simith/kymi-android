@@ -1,0 +1,152 @@
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"     
+android:layout_width="fill_parent" android:layout_height="fill_parent">
+<RelativeLayout 
+    
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+ 
+    android:orientation="vertical">
+
+     <TextView
+        android:id="@+id/fullNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:paddingLeft="3dip"
+         android:layout_alignParentTop="true"
+         android:layout_marginTop="5dp"
+         android:textSize="@dimen/font_size"
+        android:text="Your name" 
+        />
+     <EditText
+        android:id="@+id/fullName"
+        android:gravity="center_vertical|left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dip"
+        android:textSize="@dimen/font_size"
+        android:padding = "5dp"
+        android:hint="First name,Last name"
+        android:layout_below="@id/fullNameLabel"  
+         android:layout_marginTop="5dp"
+         />   
+     
+      <TextView
+        android:id="@+id/emailLabel"  
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dip"
+        android:textSize="@dimen/font_size"
+        android:text="Email"
+         android:layout_marginTop="5dp"
+        android:layout_below="@id/fullName"  />
+     <EditText
+        android:id="@+id/email"
+        android:gravity="center_vertical|left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dip"
+        android:layout_marginTop="5dp"
+        android:text="simith@example.com"
+        android:padding = "5dp"
+        android:hint="someone@example.com"
+        android:layout_below="@id/emailLabel"
+          
+         />   
+         
+    
+         
+     
+        <TextView
+        android:id="@+id/passwordLabel"    
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="3dip"
+         android:textSize="@dimen/font_size"
+          android:layout_marginTop="5dp"
+          android:layout_below="@id/email"  
+        android:text="Password" />
+     
+        <EditText
+         android:id="@+id/password"
+               android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:text="hello"
+                android:maxLines="1"
+                android:singleLine="true" 
+                 android:layout_marginTop="5dp"
+                 android:layout_below="@id/passwordLabel"  />
+        
+        
+        <TextView
+        android:id="@+id/repaeatPasswordLabel"    
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="3dip"
+          android:textSize="@dimen/font_size"
+          android:layout_marginTop="5dp"
+        android:text="Repeat password" 
+         android:layout_below="@id/password" />
+     
+        <EditText
+         android:id="@+id/repaeatPassword"
+               android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:text="hello"
+                android:maxLines="1"
+                 android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:layout_below="@id/repaeatPasswordLabel" />
+        
+        <TextView
+        android:id="@+id/phoneLabel"    
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:paddingLeft="3dip"
+          android:textSize="@dimen/font_size"
+          android:layout_marginTop="5dp"
+        android:text="Phone number (e.g. +33 1234567)" 
+        android:layout_below="@id/repaeatPassword"/>
+        <EditText
+        android:id="@+id/phoneNumber"
+        android:gravity="center_vertical|left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dip"
+        android:textSize="@dimen/font_size"
+        android:padding = "5dp"
+        android:hint="Phone number"
+        android:inputType="phone" 
+        android:text="+61410823227"
+        android:numeric="decimal"
+        android:layout_weight="1"
+         android:layout_below="@id/phoneLabel"
+        />   
+       
+    <Button
+    android:id="@+id/registerButton"
+    android:layout_width="fill_parent"
+    android:layout_marginTop="30dip"
+    android:layout_height="wrap_content"
+    android:background="@drawable/yellow_button" 
+    style="@style/ButtonText"
+    android:layout_below="@id/phoneNumber"
+    android:text="   Next   "
+    android:onClick="goToActivationCodeCollection"
+    />
+</RelativeLayout>
+</ScrollView>

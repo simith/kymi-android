@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ActivationCodeActivity" >
+
+    <TextView
+        android:id="@+id/activationCodeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/font_size"
+        android:text="Enter Activation Code" />
+    
+     <EditText
+        android:id="@+id/activationCode"
+        android:gravity="center_vertical|left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dip"
+         android:layout_marginTop="5dp"
+        android:textSize="@dimen/font_size"
+        android:padding = "5dp"
+        android:hint="Eg: 1234"
+        android:layout_below="@id/activationCodeLabel"
+        android:inputType="number"  
+         />   
+    <Button
+     android:id="@+id/activateButton"   
+     android:layout_marginTop="30dip"
+     android:layout_height="wrap_content"
+     android:background="@drawable/yellow_button" 
+    style="@style/ButtonText"
+     android:text="Activate Kymi"
+     android:onClick="activateNow" 
+     android:layout_below="@id/activationCode"/>
+</RelativeLayout>

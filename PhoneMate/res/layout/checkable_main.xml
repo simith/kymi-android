@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical" >
+ <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:id="@+id/wMsgViewItem"
+    android:background="@drawable/layout_selector"
+    android:clickable="true"
+    >
+  <ImageView
+        android:id="@+id/wicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/menu"/>
+  <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:clickable="false">
+    <TextView
+        android:id="@+id/wtitle"
+        android:gravity="center_vertical|center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/welcomeMsg"
+        android:paddingLeft="3dip"
+        android:textSize="@dimen/font_size"
+        android:padding = "5dp"
+        android:clickable="false"
+         />   
+  <ImageView
+        android:id="@+id/wnextIcon"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/navigation_next_item"
+        android:padding="25dp"
+        android:clickable="false"/>
+</RelativeLayout>
+</LinearLayout>
+ <com.mobeta.android.dslv.DragSortListView 
+    xmlns:dslv="http://schemas.android.com/apk/res/com.enterpriseapps.kymi"
+    android:id="@android:id/list" 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dp"
+    android:choiceMode="multipleChoice"
+    android:dividerHeight="1px"
+    android:padding="3dp"
+    dslv:click_remove_id="@id/click_remove"
+    dslv:collapsed_height="1px"
+    dslv:drag_enabled="true"
+    dslv:drag_handle_id="@id/drag_handle"
+    dslv:drag_scroll_start="0.33"
+    dslv:drag_start_mode="onDown"
+    dslv:float_alpha="0.6"
+    dslv:remove_enabled="true"
+    dslv:remove_mode="clickRemove"
+    dslv:slide_shuffle_speed="0.3" />
+</LinearLayout>

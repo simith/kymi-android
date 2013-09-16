@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MenuOptionsWelcomeMessageCollectActivity" 
+    android:orientation="vertical">
+
+   <EditText
+       android:id="@+id/welcomeMsg"
+       android:layout_width="match_parent"
+       android:layout_height="120dip"
+       android:ems="10"
+       android:hint=" Welcome message"
+       android:gravity="left|top"
+       android:inputType="textMultiLine|textCapSentences" 
+       android:background="@drawable/border">
+       <requestFocus />
+   </EditText>
+ <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:paddingTop="10dip">
+  <TableRow>
+    <Button android:id="@+id/cancelWmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Cancel "/>
+    <Button android:id="@+id/saveWmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Save "/>
+   
+  </TableRow>
+</TableLayout>
+
+</LinearLayout>
